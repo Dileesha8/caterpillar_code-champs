@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="getintouch.css">
   <title>Contact Section</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
   <section class="contact-section">
@@ -38,6 +39,49 @@
       </div>
       <button type="submit" class="submit-button">SEND MESSAGE</button>
     </form>
+    
+        <script>
+  // Initialize EmailJS with your user ID
+  emailjs.init("adileesha300@gmail.com");
+
+  // Function to handle form submission
+  function sendEmail(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Log the values to ensure they are being captured
+    console.log('Form values:', { name, email, subject, message });
+
+    // Send email using EmailJS
+    emailjs.send('your_service_id', 'your_template_id', {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message
+    })
+    .then(response => {
+      console.log('Email sent successfully:', response);
+      alert('Message sent successfully!');
+      document.querySelector('form').reset(); // Reset form fields
+    })
+    .catch(error => {
+      console.error('EmailJS Error:', error);
+      alert('Error sending message. Please try again later.');
+    });
+  }
+
+  // Attach event listener to form
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('form').addEventListener('submit', sendEmail);
+  });
+
+</script>
+   
   </section>
 </body>
 </html>
