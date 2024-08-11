@@ -1,0 +1,303 @@
+<style>
+.contact-section {
+  background-color: #842b2b;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); /* Reduced shadow */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 600px; /* Reduced min-height */
+  width: 100%;
+  align-items: center;
+  padding: 32px 40px; /* Reduced padding */
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section-title {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font: 700 32px Inter, sans-serif; /* Reduced font size and weight */
+}
+
+.contact-info {
+  position: relative;
+  width: 400px; /* Reduced width */
+  max-width: 100%;
+}
+
+.contact-info-wrapper {
+  gap: 10px; /* Reduced gap */
+  display: flex;
+  justify-content: center; /* Center-align items */
+  align-items: center;
+}
+
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 20%; /* Adjusted width */
+}
+
+.contact-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 60px; /* Reduced width */
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 80%; /* Adjusted width */
+}
+
+.info-text {
+  position: relative;
+  display: flex;
+  margin-top: 8px; /* Reduced margin-top */
+  flex-direction: column;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  font: 700 24px Inter, sans-serif; /* Reduced font size and weight */
+}
+
+.phone-number {
+  align-self: center; /* Center-align text */
+}
+
+.email-address {
+  margin: 10px 0 0 5px; /* Reduced margin */
+  text-align: center; /* Center-align text */
+}
+
+.form-container {
+  position: relative;
+  align-self: center; /* Center-align form container */
+  display: flex;
+  margin-top: 60px; /* Reduced margin-top */
+  width: 100%;
+  max-width: 800px; /* Reduced max-width */
+  flex-direction: column;
+}
+
+.form-row {
+  gap: 10px; /* Reduced gap */
+  display: flex;
+  justify-content: center; /* Center-align items */
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+}
+
+.input-group {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  text-align: center;
+  font: 400 20px Inter, sans-serif; /* Reduced font size */
+}
+
+.form-input,
+.form-input.email,
+.form-textarea,
+.form-subject {
+  background-color: rgba(217, 217, 217, 0.48);
+  color: rgba(0, 0, 0, 0.72);
+  padding: 10px 8px; /* Reduced padding */
+  text-align: center; /* Center-align text */
+}
+
+.form-input.email {
+  background-color: rgba(217, 217, 217, 0.47);
+  margin-top: 40px; /* Reduced margin-top */
+  color: rgba(0, 0, 0, 0.7);
+  padding: 12px 10px; /* Reduced padding */
+}
+
+.message-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 10px; /* Reduced margin-left */
+}
+
+.form-textarea {
+  background-color: rgba(217, 217, 217, 0.57);
+  flex-grow: 1;
+  color: rgba(0, 0, 0, 0.71);
+  text-align: center;
+  width: 100%;
+  padding: 12px 10px; /* Reduced padding */
+  font: 400 20px Inter, sans-serif; /* Reduced font size */
+}
+
+.form-subject {
+  background-color: rgba(217, 217, 217, 0.59);
+  margin-top: 40px; /* Reduced margin-top */
+  width: 100%;
+  color: rgba(0, 0, 0, 0.79);
+  white-space: nowrap;
+  text-align: center;
+  padding: 16px 10px; /* Reduced padding */
+  font: 400 20px Inter, sans-serif; /* Reduced font size */
+}
+
+.submit-button {
+  align-self: center;
+  width: 200px; /* Reduced width */
+  border-radius: 20px; /* Reduced border-radius */
+  background: #fff;
+  margin-top: 30px; /* Reduced margin-top */
+  min-height: 40px; /* Reduced min-height */
+  color: #000;
+  text-align: center;
+  letter-spacing: -0.1px; /* Reduced letter-spacing */
+  padding: 10px 5px; /* Reduced padding */
+  font: 700 18px/1 Inter, sans-serif; /* Reduced font size and weight */
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .contact-container {
+    max-width: 100%;
+    padding: 0 10px; /* Adjusted padding */
+  }
+
+  .section-title {
+    max-width: 100%;
+    font-size: 24px; /* Reduced font size */
+  }
+
+  .contact-info-wrapper {
+    flex-direction: column;
+    align-items: center; /* Center-align items */
+    gap: 0;
+  }
+
+  .icon-column,
+  .info-column {
+    width: 100%;
+  }
+
+  .info-text {
+    max-width: 100%;
+    white-space: initial;
+  }
+
+  .form-container {
+    max-width: 100%;
+    margin-top: 20px; /* Reduced margin-top */
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center; /* Center-align items */
+    gap: 0;
+  }
+
+  .form-column,
+  .message-column {
+    width: 100%;
+  }
+
+  .input-group {
+    max-width: 100%;
+    margin-top: 20px; /* Reduced margin-top */
+  }
+
+  .form-input,
+  .form-input.email,
+  .form-textarea,
+  .form-subject {
+    max-width: 100%;
+    text-align: center; /* Center-align text */
+  }
+
+  .form-input {
+    padding-right: 10px; /* Reduced padding-right */
+  }
+
+  .form-input.email {
+    margin-top: 20px; /* Reduced margin-top */
+    padding: 0 10px; /* Reduced padding */
+  }
+
+  .form-textarea {
+    margin-top: 20px; /* Reduced margin-top */
+    padding: 0 10px 60px; /* Adjusted padding */
+  }
+
+  .form-subject {
+    margin-top: 20px; /* Reduced margin-top */
+    white-space: initial;
+    padding: 0 10px; /* Reduced padding */
+  }
+
+  .submit-button {
+    margin-top: 20px; /* Reduced margin-top */
+  }
+}
+
+</style>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ee4b9a46f8bf1b5c40534396002ad629541fad09a220202408a0752cc53a817?placeholderIfAbsent=true&apiKey=52ba390cf8a542c3ad7f2ef3f8a2b581" class="background-image" alt="" />
+    <h2 class="section-title">GET IN TOUCH</h2>
+    <div class="contact-info">
+      <div class="contact-info-wrapper">
+        <div class="icon-column">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f2982df7339a48d75bc68d8e2b5fdea64d4557fd290a71f070e45ae3e3ac3886?placeholderIfAbsent=true&apiKey=52ba390cf8a542c3ad7f2ef3f8a2b581" class="contact-icon" alt="Contact icon" />
+        </div>
+        <div class="info-column">
+          <div class="info-text">
+            <p class="phone-number">Phone:+917013325303</p>
+            <p class="email-address">Email:adileesha@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="form-container">
+      <div class="form-row">
+        <div class="form-column">
+          <div class="input-group">
+            <label for="name" class="visually-hidden">Your Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your Name" />
+            <label for="email" class="visually-hidden">Your Email</label>
+            <input type="email" id="email" class="form-input email" placeholder="Your Email" />
+          </div>
+        </div>
+        <div class="message-column">
+          <label for="message" class="visually-hidden">Your Message</label>
+          <textarea id="message" class="form-textarea" placeholder="Your Message"></textarea>
+        </div>
+      </div>
+      <label for="subject" class="visually-hidden">Subject</label>
+      <input type="text" id="subject" class="form-subject" placeholder="Subject" />
+      <button type="submit" class="submit-button">SEND MESSAGE</button>
+    </form>
+  </div>
+</section>
